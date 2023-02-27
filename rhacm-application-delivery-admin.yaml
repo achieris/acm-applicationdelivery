@@ -767,42 +767,37 @@ rules:
   resources:
   - subscriptions
   verbs:
-  - '*'          
-          #  - list
-          #  - create
-          #  - watch
-          #  - update
-          #  - patch
-          #  - delete
-          #  - get
+  - list
+  - create
+  - watch
+  - update
+  - patch
+  - delete
+  - get
 - apiGroups:
   - app.k8s.io
   resources:
   - applications
   verbs:
-  - '*'
-          
-          #  - list
-          #  - create
-          #  - watch
-          #  - update
-          #  - patch
-          #  - delete
-          #  - get
+  - list
+  - create
+  - watch
+  - update
+  - patch
+  - delete
+  - get
 - apiGroups:
   - apps.open-cluster-management.io
   resources:
   - channels
   verbs:
-  - '*'
-          
-          #  - list
-          #  - create
-          #  - watch
-          #  - update
-          #  - patch
-          #  - delete
-          #  - get
+  - list
+  - create
+  - watch
+  - update
+  - patch
+  - delete
+  - get
 - apiGroups:
   - apps.open-cluster-management.io
   resources:
@@ -861,32 +856,28 @@ rules:
   - applications
   - applications/status
   verbs:
-  - '*'
-          
-          #  - list
-          #  - create
-          #  - watch
-          #  - update
-          #  - patch
-          #  - delete
-          #  - deletecollection
-          #  - get
+  - list
+  - create
+  - watch
+  - update
+  - patch
+  - delete
+  - deletecollection
+  - get
 - apiGroups:
   - argoproj.io
   resources:
   - applications
   - applications/status
   verbs:
-  - '*'
-          
-          #  - list
-          #  - create
-          #  - watch
-          #  - update
-          #  - patch
-          #  - delete
-          #  - deletecollection
-          #  - get
+  - list
+  - create
+  - watch
+  - update
+  - patch
+  - delete
+  - deletecollection
+  - get
 - apiGroups:
   - apps.open-cluster-management.io
   resources:
@@ -916,25 +907,22 @@ rules:
   resources:
   - subscriptionreports
   verbs:
-  - '*'
-          #  - list
-          #  - create
-          #  - watch
-          #  - update
-          #  - patch
-          #  - delete
-          #  - get
+  - list
+  - create
+  - watch
+  - update
+  - patch
+  - delete
+  - get
 - apiGroups:
   - apps.open-cluster-management.io
   resources:
   - subscriptionstatuses
   verbs:
-  - '*'
-          
-          #  - list
-          #  - create
-          #  - watch
-          #  - update
-          #  - patch
-          #  - delete
-          #  - get
+  - list
+  - create
+  - watch
+  - update
+  - patch
+  - delete
+  - get
