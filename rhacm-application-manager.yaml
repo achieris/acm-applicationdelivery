@@ -1,0 +1,174 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: rhacm-application-manager
+rules:
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resources:
+  - managedclusters
+  - managedclusters/status
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resources:
+  - managedclustersets
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resources:
+  - clustercurators
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - action.open-cluster-management.io
+  resources:
+  - managedclusteractions
+  - managedclusteractions/status
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - view.open-cluster-management.io
+  resources:
+  - managedclusterviews
+  - managedclusterviews/status
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+  - update
+  - delete
+  - deletecollection
+  - patch
+- apiGroups:
+  - internal.open-cluster-management.io
+  resources:
+  - managedclusterinfos
+  - managedclusterinfos/status
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - addon.open-cluster-management.io
+  resources:
+  - managedclusteraddons
+  - managedclusteraddons/status
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - addon.open-cluster-management.io
+  resources:
+  - clustermanagementaddons
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - clusterview.open-cluster-management.io
+  resources:
+  - managedclusters
+  - managedclustersets
+  verbs:
+  - list
+  - get
+  - watch
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resources:
+  - managedclustersetbindings
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resources:
+  - placements
+  - placements/status
+  - placementdecisions
+  - placementdecisions/status
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+  - update
+  - delete
+  - deletecollection
+  - patch
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resources:
+  - addonplacementscores
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+  - update
+  - delete
+  - deletecollection
+  - patch
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resources:
+  - managedclusters
+  - managedclusters/accept
+  - managedclusters/status
+  - clustercurators
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resources:
+  - managedclustersets
+  - managedclustersets/bind
+  - managedclustersets/join
+  - managedclustersets/status
+  - managedclustersetbindings
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - addon.open-cluster-management.io
+  resources:
+  - managedclusteraddons
+  - managedclusteraddons/status
+  - clustermanagementaddons
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ''
+  resources:
+  - namespaces
+  verbs:
+  - create
+  - update
+  - patch
+- apiGroups:
+  - ''
+  resources:
+  - projects
+  verbs:
+  - create
+  - update
+  - patch

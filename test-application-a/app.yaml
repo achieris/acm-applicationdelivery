@@ -1,0 +1,37 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: app-a
+  namespace: app-a
+spec:
+  componentKinds:
+  - group: apps.open-cluster-management.io
+    kind: Subscription
+  selector:
+    matchExpressions:
+    - key: app
+      operator: In
+      values:
+      - app-a
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  annotations:
+    apps.open-cluster-management.io/cluster-admin: "true"
+    apps.open-cluster-management.io/git-branch: master
+    apps.open-cluster-management.io/git-path: /pricelist
+    apps.open-cluster-management.io/reconcile-option: replace
+  labels:
+    app: app-a
+    app.kubernetes.io/part-of: app-a
+    apps.open-cluster-management.io/reconcile-rate: medium
+  name: app-a
+  namespace: app-a
+spec:
+  channel: app-a/channel
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: placement-rule
+  secondaryChannel: ""
