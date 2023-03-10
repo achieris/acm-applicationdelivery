@@ -164,11 +164,18 @@ rules:
   - create
   - update
   - patch
+    #- apiGroups:
+    #  - ''
+    #  resources:
+    #  - projects
+    #  verbs:
+    #  - create
+    #  - update
+    #  - patch
 - apiGroups:
-  - ''
+  - ""
+  - project.openshift.io
   resources:
-  - projects
+  - projectrequests
   verbs:
   - create
-  - update
-  - patch

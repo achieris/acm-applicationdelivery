@@ -765,6 +765,13 @@ rules:
 - apiGroups:
   - apps.open-cluster-management.io
   resources:
+  - '*'
+  verbs:
+  - '*' 
+    
+- apiGroups:
+  - apps.open-cluster-management.io
+  resources:
   - subscriptions
   verbs:
   - list
